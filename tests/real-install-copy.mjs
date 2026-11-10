@@ -6,7 +6,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { resolveInstall, runPack, parseJson } from '../LanguagePack.mjs';
+import { resolveInstall, runPack, parseJson } from '../scripts/LanguagePack.mjs';
 const sha = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 if (!process.argv[2]) throw new Error('Usage: node tests/real-install-copy.mjs <Cursor install path>');

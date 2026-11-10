@@ -1,2 +1,2 @@
 #!/bin/bash
-exec /bin/bash "$(cd -- "$(dirname -- "$0")" && pwd -P)/LanguagePack.command" "$@"
+exec /bin/bash "$(cd -- "$(dirname -- "$0")" && pwd -P)/scripts/LanguagePack.sh" "$@"

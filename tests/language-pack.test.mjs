@@ -4,7 +4,7 @@ import os from 'node:os';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { test } from 'node:test';
-import { runPack, resolveInstall, parseJson, localeText, assertClosed, renameFile } from '../LanguagePack.mjs';
+import { runPack, resolveInstall, parseJson, localeText, assertClosed, renameFile } from '../scripts/LanguagePack.mjs';
 
 const checksum = bytes => crypto.createHash('sha256').update(bytes).digest('base64').replace(/=+$/, '');
 const write = (file, value) => { fs.mkdirSync(path.dirname(file), { recursive: true }); fs.writeFileSync(file, typeof value === 'string' ? value : JSON.stringify(value)); };

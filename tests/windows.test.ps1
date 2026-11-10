@@ -20,7 +20,7 @@ try {
     } finally { $env:CURSOR_INSTALL_DIR = $savedInstallDir }
     Assert-CursorClosed $root
     $tokens = $null; $errors = $null
-    [void][Management.Automation.Language.Parser]::ParseFile((Join-Path (Split-Path $PSScriptRoot -Parent) 'LanguagePack.ps1'), [ref]$tokens, [ref]$errors)
+    [void][Management.Automation.Language.Parser]::ParseFile((Join-Path (Split-Path $PSScriptRoot -Parent) 'scripts\LanguagePack.ps1'), [ref]$tokens, [ref]$errors)
     if ($errors.Count) { throw ($errors | Out-String) }
     Write-Host 'PASS Windows discovery, exe/CLI/resource paths, Unicode/spaces, duplicates, missing paths, installer syntax'
 } finally {

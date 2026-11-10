@@ -4,11 +4,11 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { rewrite } from './scripts/hardcoded.mjs';
-import { rewriteCommerce } from './scripts/commerce.mjs';
-import { rewriteExtension } from './scripts/extensions.mjs';
+import { rewrite } from './hardcoded.mjs';
+import { rewriteCommerce } from './commerce.mjs';
+import { rewriteExtension } from './extensions.mjs';
 
-const ROOT = path.dirname(fileURLToPath(import.meta.url));
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const COMMERCE = 'out/vs/workbench/workbench.xai-commerce-prepaid.js';
 const BUNDLES = ['out/vs/workbench/workbench.desktop.main.js', 'out/vs/workbench/workbench.glass.main.js',
   'out/vs/workbench/workbench.anysphere-ui-automations.js', COMMERCE];

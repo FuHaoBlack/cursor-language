@@ -11,7 +11,7 @@ param(
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 [Console]::OutputEncoding = [Text.UTF8Encoding]::new($false)
-. (Join-Path $PSScriptRoot 'scripts\windows-discovery.ps1')
+. (Join-Path $PSScriptRoot 'windows-discovery.ps1')
 
 function Select-CursorInstall {
     param([string]$ExplicitPath)
@@ -33,7 +33,7 @@ function Select-CursorInstall {
 
 function Find-LanguagePackRuntime {
     param([string]$InstallRoot)
-    # Electron's Node mode is also used by Cursor's own extension-install CLI.
+    # Use Cursor's bundled Electron runtime in Node mode.
     $candidates = @((Join-Path $InstallRoot 'Cursor.exe'))
     $node = Get-Command node.exe -ErrorAction SilentlyContinue
     if ($node) { $candidates += $node.Source }

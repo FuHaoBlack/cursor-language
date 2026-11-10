@@ -1,6 +1,6 @@
 @echo off
 setlocal
-set "SCRIPT=%~dp0LanguagePack.ps1"
+set "SCRIPT=%~dp0scripts\LanguagePack.ps1"
 if not exist "%SCRIPT%" (
   echo Installer script not found. Please extract the complete package.
   pause
