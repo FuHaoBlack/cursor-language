@@ -8,7 +8,7 @@ third parties. Their license terms are reproduced below.
 1. Visual Studio Code Localization Extension (vscode-loc)
 ================================================================================
 
-When this project is built in "full" mode, the localized string resources for
+The localized string resources for
 the Visual Studio Code / Code OSS core workbench and for the built-in
 extensions are derived from the microsoft/vscode-loc repository:
 
@@ -38,8 +38,8 @@ Those strings are used, modified and redistributed under the MIT License:
     FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
     DEALINGS IN THE SOFTWARE.
 
-The upstream commit or tag used for a given release is recorded in
-`config.json` (`upstream.ref`) and in the generated extension manifest.
+The upstream commit used by this standalone Simplified Chinese package is
+recorded in `translated-zh-CN/metadata.json` (`upstream.commit`).
 
 ================================================================================
 2. Trademarks
@@ -52,6 +52,6 @@ Anysphere, Inc. or Microsoft Corporation. Product names are used only to
 describe compatibility.
 
 Source string identifiers of Cursor-authored workbench modules and built-in
-extensions are referenced for the sole purpose of interoperability, as required
-by the Visual Studio Code language pack contribution format. No Cursor source
+extensions are referenced for the sole purpose of interoperability with the
+installed application's language resources. No Cursor source
 code is copied or redistributed by this project.

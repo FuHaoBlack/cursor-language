@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "locale": "zh-cn",
+  "verifiedCursorVersions": [
+    "3.29.9"
+  ],
+  "addedHardcodedTranslations": 1547,
+  "upstream": {
+    "repository": "microsoft/vscode-loc",
+    "commit": "9f7f99d0d6d281b7ce3d4c6f1a36899349f8d2d5",
+    "license": "MIT"
+  },
+  "verifiedPlatforms": [
+    "win32"
+  ],
+  "sourceVariantKeys": 10,
+  "sourceVariants": 21
+}
